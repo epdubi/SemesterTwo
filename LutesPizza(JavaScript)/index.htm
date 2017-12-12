@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lutes Pizza</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #mainWrapper {
+            width: 800px;
+            margin: 0 auto;
+            background: #f0f0f0;
+            min-height: 600px;
+        }
+        
+        header {
+            width: 800px;
+            margin: 0 auto;
+            height: 100px;
+            background: red;
+            font-size: 140%;
+            text-align: center;
+            position: relative;
+        }
+        
+        header p {
+            font-family: serif;
+            font-style: italic;
+            color: #ffffff;
+        }
+        
+        h3 {
+            padding: 5px;
+        }
+        
+        #mainSelection {
+            margin-bottom: 10px;
+        }
+        
+        form {
+            padding: 5px;
+        }
+        
+        .pizzaType,
+        .numWings,
+        #pizzaToppings,
+        #wingOptions {
+            display: none;
+            padding-top: 5px;
+        }
+        
+        .left,
+        .last,
+        .middle {
+            width: 125px;
+            display: block;
+            float: left;
+        }
+        
+        #errorText,
+        .errorMessage {
+            color: red;
+            font-style: italic;
+        }
+        
+        #pizzaPic1 {
+            position: absolute;
+            top: 5px;
+            left: 15px;
+        }
+        
+        #pizzaPic2 {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="pizzaPic1" src="pizza.png" height="100" width="100" alt="Lutes Pizza" />
+        <img id="pizzaPic2" src="pizza.png" height="100" width="100" alt="Lutes Pizza" />
+        <h1>Lutes Pizza</h1>
+        <p>Best Pizza At Affordable Prices!</p>
+    </header>
+    <article id="mainWrapper">
+        <form action="results.htm" novalidate>
+            <div id="mainSelection">
+                <h3 id="errorText"></h3>
+                <h3>What would you like today?</h3>
+                <input type="radio" name="Main Selection" value="pizza" id="pickPizza" />
+                <label>Pizza</label>
+                <input type="radio" name="Main Selection" value="wings" id="pickWings" />
+                <label>Wings</label>
+                <br>
+                <div class="errorMessage"></div>
+                <div id="selectionOptions">
+                    <label class="pizzaType">Pizza Type:</label>
+                    <select class="pizzaType" id="custom">
+                        <option name="Pizza Style" value="supreme" class="pizzaTyp">Supreme</option>
+                        <option name="Pizza Style" value="meatLovers" class="pizzaTyp">Meat Lovers</option>
+                        <option name="Pizza Style" value="veggie" class="pizzaTyp">Veggie</option>
+                        <option name="Pizza Style" value="custom" class="pizzaTyp">Custom</option>
+                    </select>
+                    <label class="numWings">Number Of Wings:</label>
+                    <select class="numWings" id="wings">
+                        <option name="Qty" value="1doz">1 Dozen</option>
+                        <option name="Qty" value="2doz">2 Dozen</option>
+                        <option name="Qty" value="3doz">3 Dozen</option>
+                        <option name="Qty" value="5doz">5 Dozen</option>
+                        <option name="Qty" value="10doz">10 Dozen Party Pack</option>
+                    </select>
+                    <div class="errorMessage"></div>
+                </div>
+                <!--End selectionOptions-->
+            </div>
+            <!--End mainSelection-->
+            <div id="pizzaToppings">
+                <h3>Choose at least one topping:</h3>
+                <div class="row1 left">
+                    <input type="checkbox" name="Toppings" value="mushroom" checked/>
+                    <label>Mushroom</label>
+                </div>
+                <div class="row1 middle">
+                    <input type="checkbox" name="Toppings" value="onions" checked/>
+                    <label>Onions</label>
+                </div>
+                <div class="row1 last">
+                    <input type="checkbox" name="Toppings" value="pinapple" checked/>
+                    <label>Pineapple</label>
+                </div>
+                <br>
+                <div class="row2 left">
+                    <input type="checkbox" name="Toppings" value="peperoni" checked/>
+                    <label>Peperoni</label>
+                </div>
+                <div class="row2 middle">
+                    <input type="checkbox" name="Toppings" value="greenPeppers" checked/>
+                    <label>Green Peppers</label>
+                </div>
+                <div class="row2 last">
+                    <input type="checkbox" name="Toppings" value="hamburger" checked/>
+                    <label>Hamburger</label>
+                </div>
+                <br>
+                <div class="row3 left">
+                    <input type="checkbox" name="Toppings" value="suasage" checked/>
+                    <label>Sausage</label>
+                </div>
+                <div class="row3 middle">
+                    <input type="checkbox" name="Toppings" value="olives" checked/>
+                    <label>Olives</label>
+                </div>
+                <div class="row3 last">
+                    <input type="checkbox" name="Toppings" value="cheese" checked/>
+                    <label>Cheese</label>
+                </div>
+                <br>
+                <div class="errorMessage"></div>
+            </div>
+            <!--End pizzaToppings-->
+            <div id="wingOptions">
+                <h3>Choose one:</h3>
+                <input type="radio" name="Wings Temp" value="flamingHot" />
+                <label>Flaming Hot</label>
+                <input type="radio" name="Wings Temp" value="reallySpicy" />
+                <label>Really Spice</label>
+                <input type="radio" name="Wings Temp" value="mild" />
+                <label>Flaming Hot</label>
+                <input type="radio" name="Wings Temp" value="coldFlame" />
+                <label>Cold Flame</label>
+                <br>
+                <div class="errorMessage"></div>
+            </div>
+            <!--End wingOptions-->
+            <div id="pickupOptions">
+                <h3>Select Either Pickup or Delivery</h3>
+                <input type="checkbox" name="Delivery Preference" value="pickup" checked />
+                <label>Pickup</label>
+                <input type="checkbox" name="Delivery Preference" value="delivery" />
+                <label>Delivery</label>
+                <div class="errorMessage" id="pickupError"></div>
+                <br>
+            </div>
+            <!--End pickupOptions-->
+            <div id="customerInformation">
+                <h3>Customer Information</h3>
+                <label class="custLabel">First Name: </label>
+                <input class="address" name="First Name" type="text" placeholder="First Name" />
+                <br>
+                <label class="custLabel">Last Name: </label>
+                <input class="address" name="Last Name" type="text" placeholder="Last Name" />
+                <br>
+                <label class="custLabel">Street Address: </label>
+                <input class="address" name="Street Address" type="text" placeholder="Street Address" />
+                <br>
+                <label class="custLabel">Zip: </label>
+                <input class="address" name="Zip" type="text" placeholder="Zip" />
+                <br>
+                <label class="custLabel">Email: </label>
+                <input class="address" name="Email" type="text" placeholder="Email" />
+                <br>
+                <label class="custLabel">Confirm Email: </label>
+                <input class="address" type="text" placeholder="Confirm Email" />
+                <br>
+                <label class="custLabel">Phone: </label>
+                <input class="address" name="Phone" type="text" placeholder="Phone" />
+                <br>
+                <div class="errorMessage"></div>
+            </div>
+            <!--End customerInformation-->
+            <div id="billingInformation">
+                <h3>Billing Information:</h3>
+                <label>Same As Above: </label>
+                <input type="checkbox" name="Billing Info" value="Same as above" id="copyBilling" />
+                <br>
+                <label class="custLabel">First Name: </label>
+                <input class="addressCopy" name="First Name" type="text" placeholder="First Name" />
+                <br>
+                <label class="custLabel">Last Name: </label>
+                <input class="addressCopy" name="Last Name" type="text" placeholder="Last Name" />
+                <br>
+                <label class="custLabel">Street Address: </label>
+                <input class="addressCopy" name="Street Address" type="text" placeholder="Street Address" />
+                <br>
+                <label class="custLabel">Zip: </label>
+                <input class="addressCopy" name="Zip" type="text" placeholder="Zip" />
+                <br>
+                <label class="custLabel">Phone: </label>
+                <input class="addressCopy" name="Phone" type="text" placeholder="Phone" />
+                <br>
+                <div class="errorMessage"></div>
+            </div>
+            <!--End billingInformation-->
+            <input type="submit" value="Submit" id="submitBtn" onclick="validateForm()" />
+        </form>
+    </article>
+    <script>
+        //Global Var's
+        var formValidity = true;
+        var errorMsg = document.getElementsByClassName("errorMessage");
+
+
+
+
+
+
+        //clearDefaults
+        function clearDefaults() {
+            console.log("clearDefaults() has been called!");
+            var checkBoxes = document.querySelectorAll("input[type='checkbox']");
+            for (var i = 0; i < checkBoxes.length; i++) {
+                checkBoxes[i].checked = false;
+            } //end for-loop
+            var radioBtns = document.querySelectorAll("input[type='radio']");
+            for (var i = 0; i < radioBtns.length; i++) {
+                radioBtns[i].checked = false;
+            } //end for-loop
+            var selectLists = document.querySelectorAll("select");
+            for (var i = 0; i < selectLists.length; i++) {
+                selectLists[i].selectedIndex = -1;
+            } //end for-loop
+        } //End clearDefaults()
+
+        //addressCopy()
+        function addressCopy() {
+            console.log("addressCopy() has been called!");
+            var formElems = document.forms[0].elements;
+            /*for (var i = 19; i < 32; i++) {
+                formElems[i + 8].value = formElems[i].value;
+            }*/
+            formElems[27].value = formElems[19].value;
+            formElems[28].value = formElems[20].value;
+            formElems[29].value = formElems[21].value;
+            formElems[30].value = formElems[22].value;
+            formElems[31].value = formElems[25].value;
+        } //End addressCopy()
+
+        //chooseSelection()
+        function chooseSelection() {
+            console.log("chooseSelection() has been called!");
+            var showPizzaOptions = document.getElementById("pizzaToppings");
+            var pizzaSelect = document.getElementById("pickPizza");
+            if (pizzaSelect.checked == true) {
+                document.querySelectorAll("#selectionOptions .pizzaType")[0].style.display = "initial";
+                document.querySelectorAll("#selectionOptions .pizzaType")[1].style.display = "initial";
+            } else if (pizzaSelect.checked == false) {
+                document.querySelectorAll("#selectionOptions .pizzaType")[0].style.display = "none";
+                document.querySelectorAll("#selectionOptions .pizzaType")[1].style.display = "none";
+            }
+            var wingSelect = document.getElementById("pickWings");
+            var showWingOptions = document.querySelectorAll("#selectionOptions .numWings");
+            var showWingTemp = document.getElementById("wingOptions");
+            if (wingSelect.checked == true) {
+                showWingOptions[0].style.display = "initial";
+                showWingOptions[1].style.display = "initial";
+                showWingTemp.style.display = "initial";
+            } else if (wingSelect.checked == false) {
+                showWingOptions[0].style.display = "none";
+                showWingOptions[1].style.display = "none";
+                showWingTemp.style.display = "none";
+            }
+            validateMainSelection();
+
+        } //End chooseSelection()
+
+        //showToppings()
+        function showToppings() {
+            console.log("showToppings() has been called!");
+            var toppings = document.querySelector("#pizzaToppings");
+            var listCust = document.getElementById("custom");
+            if (listCust.selectedIndex == 3) {
+                toppings.style.display = "initial";
+            } else if (listCust.selectedIndex != 3) {
+                toppings.style.display = "none";
+            }
+        } //End showToppings()
+
+        //validateMainSelection()
+        function validateMainSelection() {
+            console.log("validateMainSelection() has been called!");
+            var pizzaSelect = document.getElementById("pickPizza");
+            var wingSelect = document.getElementById("pickWings");
+            if (pizzaSelect.checked != true && wingSelect.checked != true) {
+                errorMsg[0].innerHTML = "Please select either pizza or wings";
+                formValidity = false;
+            } else {
+                formValidity = true;
+                errorMsg[0].style.display = "none";
+            }
+
+        } //End validateMainSelection()
+
+        //validateSelectionOptions()
+        function validateSelectionOptions() {
+            console.log("validateSelectionOptions() has been called!");
+            var listCust = document.getElementById("custom");
+            var listWing = document.getElementById("wings");
+            /*if (listCust.selectedIndex == -1) {
+                alert("Please select a pizza type");
+            }*/
+            /*else if (listWing.selectedIndex == -1) {
+                           alert("Please select number of wings");
+                       }*/
+
+        } //End validateSelectionOptions()
+
+        //validatePickup()
+        function validatePickup() {
+            console.log("validatePickup() has been called!");
+            var pickupBox = document.querySelectorAll("#pickupOptions input");
+            if (pickupBox[0].checked == true && pickupBox[1].checked == true) {
+                errorMsg[4].innerHTML = "Please select either pickup or delivery but not both!";
+                formValidity = false;
+            } else if (pickupBox[0].checked != true && pickupBox[1].checked != true) {
+                errorMsg[4].innerHTML = "Please select pickup or delivery!";
+                formValidity = false;
+            } else {
+                formValidity = true;
+                errorMsg[4].innerHTML = "";
+            }
+
+        } //End validatePickup()
+
+        //validateCustomerInformation(fieldsetID)
+        function validateCustomerInformation(fieldsetID) {
+            console.log("validateCustomerInformation(fieldsetID) has been called!");
+            var formElems = document.forms[0].elements;
+            for (i = 19; i < 23; i++) {
+                if (formElems[i].value == 0) {
+                    errorMsg[5].innerHTML = "Please complete all customer information!";
+                    formValidity = false;
+                } else {
+
+                    formValidity = true;
+                }
+            }
+            for (i = 27; i < 32; i++) {
+                if (formElems[i].value == 0) {
+                    errorMsg[6].innerHTML = "Please complete all Billing information!";
+                    formValidity = false;
+                } else {
+                    errorMsg[6].innerHTML = "";
+                    formValidity = true;
+                }
+            }
+
+        } //End validateCustomerInformation(fieldsetID)
+
+        //validateEmail()
+        function validateEmail() {
+            console.log("validateEmail() has been called!");
+            var formElems = document.forms[0].elements;
+            if (formElems[23].value != formElems[24].value) {
+                console.log("log");
+                errorMsg[5].innerHTML = "Emails do not match";
+                formValidity = false;
+            } else {
+                errorMsg[5].innerHTML = "";
+                formValidity = true;
+            }
+        } //End validateEmail()
+
+        //validateForm(evt)
+        function validateForm(evt) {
+            var alert = document.getElementById("errorText");
+            if (formValidity == true) {
+                window.event.preventDefault(submitBtn);
+                console.log("validateForm(evt) has been called!");
+                validateMainSelection(submitBtn);
+                validateSelectionOptions(submitBtn);
+                validatePickup(submitBtn);
+                validateEmail(submitBtn);
+                validateCustomerInformation("customerInformation");
+
+                validateCustomerInformation("billingInformation");
+                document.forms[0].submit();
+
+
+            } else {
+                alert.innerHTML = "Please fix indicated problems and then resubmit your order";
+
+            }
+        } //End validateForm(evt)
+
+        //createEventListeners()
+        function createEventListeners() {
+            console.log("createEventListeners() has been called!");
+            /************ Event Listener to Copy Billing ************/
+            var copyBillingBox = document.getElementById("copyBilling");
+            if (copyBillingBox.addEventListener) {
+                copyBillingBox.addEventListener("click", addressCopy, false);
+            } else if (copyBilling.attachEvent) {
+                copyBillingBox.attachEvent("onclick", addressCopy);
+            }
+
+            /************ Event Listener to show warranty ************/
+            var checkBoxes = document.querySelectorAll("#mainSelection input[name='Main Selection']");
+            for (var i = 0; i < checkBoxes.length; i++) {
+                if (checkBoxes[i].addEventListener) {
+                    checkBoxes[i].addEventListener("click", chooseSelection, false);
+                } else if (checkBoxes[i].attachEvent) {
+                    checkBoxes[i].attachEvent("onclick", chooseSelection);
+                } //end elseif
+            } //end for-loop
+        } //End createEventListeners()
+
+        /************ Event Listener to showToppings ************/
+        var selectPizza = document.querySelector("select[class='pizzaType']");
+        if (selectPizza.addEventListener) {
+            selectPizza.addEventListener("change", showToppings, false);
+        } else if (selectPizza.attachEvent) {
+            selectPizza.attachEvent("change", showToppings);
+        } //end else if
+
+        /************ Event Listener to validateSelectionOptions (NumWings) ************/
+        var selectWings = document.getElementsByClassName("numWings");
+        if (selectWings.addEventListener) {
+            selectWings.addEventListener("change", validateSelectionOptions, false);
+        } else if (selectWings.attachEvent) {
+            selectWings.attachEvent("change", validateSelectionOptions);
+        } //end else if
+
+        /************ Event Listener to validateSelectionOptions (wingOptions) ************/
+        var wingTemp = document.querySelectorAll("#wingOptions input");
+        for (var i = 0; i < wingTemp.length; i++) {
+            if (wingTemp[i].addEventListener) {
+                wingTemp[i].addEventListener("click", validateSelectionOptions, false);
+            } else if (wingTemp[i].attachEvent) {
+                wingTemp[i].attachEvent("onclick", validateSelectionOptions);
+            } //end elseif
+        } //end for-loop
+
+        /************ Event Listener to validateSelectionOptions (pickupOptions) ************/
+        var pickupBox = document.querySelectorAll("#pickupOptions input");
+        for (var i = 0; i < pickupBox.length; i++) {
+            if (pickupBox[i].addEventListener) {
+                pickupBox[i].addEventListener("click", validatePickup, false);
+            } else if (pickupBox[i].attachEvent) {
+                pickupBox[i].attachEvent("onclick", validatePickup);
+            } //end elseif
+        } //end for-loop
+
+        /************ Event Listener to validate the form ************/
+        var submitBtn = document.getElementById("submitBtn");
+        if (submitBtn.addEventListener) {
+            submitBtn.addEventListener("submit", validateForm, false);
+        } else if (submitBtn.attachEvent) {
+            submitBtn.attachEvent("submit", validateForm);
+        }
+
+        //setUpPage()
+        function setUpPage() {
+            console.log("setUpPage() has been called!");
+            createEventListeners();
+            clearDefaults();
+        } //End setUpPage()
+
+
+
+        //Create a load event listener
+        if (window.addEventListener) {
+            window.addEventListener("load", setUpPage, false);
+        } else if (window.attachEvent) {
+            window.attachEvent("onload", setUpPage);
+        }
+    </script>
+</body>
+
+</html>

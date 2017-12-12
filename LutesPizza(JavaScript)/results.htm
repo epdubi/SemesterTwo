@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>Lutes Pizza</title>  
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        #mainWrapper{
+            width: 800px;
+            margin: 0 auto;
+            background: #f0f0f0;
+            min-height: 600px;
+        }
+        
+        header{
+            width: 800px;
+            margin: 0 auto;
+            height: 100px;
+            background: red;
+            font-size: 140%;
+            text-align: center;
+        }
+        
+        header p{
+            font-family: serif;
+            font-style: italic;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lutes Pizza</h1>
+        <p>Best Pizza At Affordable Prices!</p>
+    </header>
+    <article id="mainWrapper">
+      <h2>Your form has been submitted</h2>
+      <div class="results">
+         <h3>Order Details:</h3>
+   
+         <script>
+             var formData = location.search;
+             formData = formData.substring(1, formData.length);
+             while (formData.indexOf("+") !== -1) {
+                formData = formData.replace("+", " ");
+             }
+             formData = decodeURIComponent(formData);
+             var formArray = formData.split("&");
+             for (var i = 0; i < formArray.length; i = i + 1) {
+                 results = formArray[i].split("=");
+                 document.write("<p>" + results[0] + ": " + results[1] + "</p>");
+             }
+         </script>
+      </div>
+   </article>   
+</body>
+</html>
