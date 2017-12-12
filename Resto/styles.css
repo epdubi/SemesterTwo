@@ -1,0 +1,692 @@
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+    
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+    
+    body {
+        line-height: 1;
+    }
+    
+    ol,
+    ul {
+        list-style: none;
+    }
+    
+    blockquote,
+    q {
+        quotes: none;
+    }
+    
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /********** FONTS *************/
+    
+    @font-face {
+        font-family: 'wc_mano_negra_btaregular';
+        src: url('WCManoNegraBta-webfont.eot');
+        src: url('WCManoNegraBta-webfont.eot?#iefix') format('embedded-opentype'), url('WCManoNegraBta-webfont.woff') format('woff'), url('WCManoNegraBta-webfont.ttf') format('truetype'), url('WCManoNegraBta-webfont.svg#wc_mano_negra_btaregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'aleoregular';
+        src: url('Aleo-Regular-webfont.eot');
+        src: url('Aleo-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('Aleo-Regular-webfont.woff') format('woff'), url('Aleo-Regular-webfont.ttf') format('truetype'), url('Aleo-Regular-webfont.svg#aleoregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'aleolight';
+        src: url('Aleo-Light-webfont.eot');
+        src: url('Aleo-Light-webfont.eot?#iefix') format('embedded-opentype'), url('Aleo-Light-webfont.woff') format('woff'), url('Aleo-Light-webfont.ttf') format('truetype'), url('Aleo-Light-webfont.svg#aleolight') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'aleobold';
+        src: url('Aleo-Bold-webfont.eot');
+        src: url('Aleo-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('Aleo-Bold-webfont.woff') format('woff'), url('Aleo-Bold-webfont.ttf') format('truetype'), url('Aleo-Bold-webfont.svg#aleobold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    /*************** OVERALL STYLES *****************/
+    
+    body {
+        background-color: white;
+    }
+    
+    .wrap {
+        width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /************* HEADER ****************/
+    
+    #resto {
+        font-family: 'wc_mano_negra_btaregular';
+        font-size: 40px;
+        color: 3a3a3a;
+        display: inline-block;
+        position: relative;
+        top: 43px;
+    }
+    
+    #dots {
+        color: #f34949;
+    }
+    
+    header ul {
+        display: inline-block;
+    }
+    
+    header ul li {
+        font-size: 14px;
+        font-family: 'aleoregular';
+        display: inline-block;
+        padding-right: 45px;
+        color: #3b3b3b;
+    }
+    
+    #linklist {
+        position: relative;
+        top: 35px;
+        left: 524px;
+    }
+    /*************** BILLBOARD ***************/
+    
+    #billboard {
+        background-image: url(billboardbackground.jpg);
+        height: 578px;
+        width: 100%;
+        background-position: center;
+        position: relative;
+        top: 74px;
+        border-bottom: solid 5px #f34949;
+    }
+    
+    #billH1 {
+        word-spacing: -10px;
+        letter-spacing: -9px;
+        font-family: 'wc_mano_negra_btaregular';
+        font-size: 100px;
+        text-align: center;
+        position: relative;
+        top: 228px;
+        color: white;
+    }
+    
+    #billP {
+        font-family: 'aleoregular';
+        font-size: 16px;
+        text-align: center;
+        position: relative;
+        top: 228px;
+        color: white;
+    }
+    
+    #dash1 {
+        position: relative;
+        top: 240.5px;
+        left: 322px;
+    }
+    
+    #dash2 {
+        position: relative;
+        top: 209px;
+        left: 737px;
+    }
+    /************ MENU *************/
+    
+    #menu {
+        height: 796px;
+        position: relative;
+        top: 75px;
+    }
+    
+    #menuImg {
+        position: relative;
+        top: -5px;
+        left: 472.5px;
+    }
+    
+    #menuH3 {
+        font-size: 20px;
+        font-family: 'aleobold';
+        color: white;
+        position: relative;
+        left: 504px;
+        top: -60px;
+    }
+    
+    .menuP {
+        font-family: 'aleoregular';
+        font-size: 16px;
+    }
+    
+    .lightP {
+        font-family: 'aleolightitalic';
+        font-size: 12px;
+        color: #b7b7b7;
+    }
+    
+    #list1 {
+        position: relative;
+        top: 50px;
+    }
+    
+    #money1 {
+        position: relative;
+        left: 57px;
+        top: -15.5px;
+        color: #555555;
+    }
+    
+    #line1 {
+        width: 194px;
+        position: relative;
+        left: 12px;
+        top: -20px;
+    }
+    
+    #list2 {
+        position: relative;
+        top: 107px;
+    }
+    
+    #money2 {
+        position: relative;
+        left: 44px;
+        top: -15.5px;
+        color: #555555;
+    }
+    
+    #line2 {
+        width: 215px;
+        position: relative;
+        left: 4px;
+        top: -20px;
+    }
+    
+    #list3 {
+        position: relative;
+        top: 166px;
+    }
+    
+    #line3 {
+        width: 201px;
+        position: relative;
+        left: 73px;
+        top: -20px;
+    }
+    
+    #money3 {
+        position: relative;
+        left: 112px;
+        top: -15.5px;
+        color: #555555;
+    }
+    
+    #list4 {
+        position: relative;
+        top: 225px;
+    }
+    
+    #line4 {
+        width: 220px;
+        position: relative;
+        left: 16px;
+        top: -20px;
+    }
+    
+    #money4 {
+        position: relative;
+        left: 58px;
+        top: -15.5px;
+        color: #555555;
+    }
+    
+    #list5 {
+        position: relative;
+        top: -79px;
+        left: 591px;
+    }
+    
+    #line5 {
+        width: 207px;
+        position: relative;
+        left: 68px;
+        top: -20px;
+    }
+    
+    #money5 {
+        position: relative;
+        left: 111px;
+        top: -15.5px;
+        color: #555555;
+    }
+    
+    #list6 {
+        position: relative;
+        top: -21px;
+        left: 591px;
+    }
+    
+    #line6 {
+        width: 181px;
+        position: relative;
+        left: 58px;
+        top: -20px;
+    }
+    
+    #money6 {
+        position: relative;
+        left: 102px;
+        top: -15.5px;
+        color: #555555;
+    }
+    
+    #list7 {
+        position: relative;
+        top: 37px;
+        left: 591px;
+    }
+    
+    #line7 {
+        width: 214px;
+        position: relative;
+        left: 6px;
+        top: -20px;
+    }
+    
+    #money7 {
+        position: relative;
+        left: 50px;
+        top: -15.5px;
+        color: #555555;
+    }
+    
+    #list8 {
+        position: relative;
+        top: 95px;
+        left: 591px;
+    }
+    
+    #line8 {
+        width: 220px;
+        position: relative;
+        left: 3px;
+        top: -20px;
+    }
+    
+    #money8 {
+        position: relative;
+        left: 46px;
+        top: -15.5px;
+        color: #555555;
+    }
+    
+    #loadImg {
+        position: relative;
+        left: 483px;
+        top: 187px;
+    }
+    /************ FEATURE **************/
+    
+    #feature {
+        height: 566px;
+        position: relative;
+        top: 50px;
+    }
+    
+    #featH3 {
+        font-family: 'aleobold';
+        font-size: 20px;
+        display: inline-block;
+        color: #3b3b3b;
+    }
+    
+    .gray {
+        color: #555555;
+    }
+    
+    #featline {
+        width: 203px;
+        position: relative;
+        top: -6px;
+        left: 17px;
+    }
+    
+    #featdots {
+        position: relative;
+        top: -2px;
+        left: 629px;
+    }
+    
+    #inline {
+        position: relative;
+        top: 77px;
+    }
+    
+    #feat1 {
+        display: inline-block;
+        margin-right: 56px;
+    }
+    
+    #feat2 {
+        display: inline-block;
+        margin-right: 56px;
+    }
+    
+    #feat3 {
+        display: inline-block;
+    }
+    
+    #feat4 {
+        display: inline-block;
+        margin-left: 56px;
+    }
+    
+    .featfont {
+        font-family: 'aleolight';
+        font-size: 16px;
+        margin-top: 24px;
+    }
+    
+    .stars {
+        margin-top: 11px;
+    }
+    
+    #fearprice1 {
+        position: relative;
+        left: 88px;
+    }
+    
+    #fearprice2 {
+        position: relative;
+        left: 81px;
+    }
+    
+    #fearprice3 {
+        position: relative;
+        left: 43px;
+    }
+    
+    #fearprice4 {
+        position: relative;
+        left: 69px;
+    }
+    /************ GALLERY *****************/
+    
+    #gallery {
+        position: relative;
+        top: 47px;
+    }
+    
+    #galleryH3 {
+        display: inline-block;
+        font-family: 'aleobold';
+        font-size: 22px;
+        color: #3b3b3b;
+    }
+    
+    #galleryLine {
+        width: 203px;
+        position: relative;
+        top: -7px;
+        left: 13px;
+    }
+    
+    #galImg {
+        position: relative;
+        top: 77px;
+    }
+    /**************** FOOTER *****************/
+    
+    footer {
+        background-color: #3b3b3b;
+        height: 319px;
+        position: relative;
+        top: 322px;
+    }
+    
+    #foot1 {
+        display: inline-block;
+        margin-right: 117px;
+        margin-top: 100px;
+    }
+    
+    #foot2 {
+        display: inline-block;
+        margin-right: 103px;
+        margin-top: 100px;
+    }
+    
+    #foot3 {
+        display: inline-block;
+        margin-right: 179px;
+        margin-top: 100px;
+    }
+    
+    #foot4 {
+        display: inline-block;
+        margin-top: 100px;
+    }
+    
+    #foot1H4 {
+        font-family: 'aleoregular';
+        font-size: 16px;
+        color: #ebebeb;
+        font-weight: 900;
+    }
+    
+    #foot1P {
+        font-family: 'aleolight';
+        font-size: 16px;
+        color: #ebebeb;
+        font-weight: lighter;
+    }
+    
+    #foot1line2 {
+        position: relative;
+        top: 14px;
+    }
+    
+    #foot1line3 {
+        position: relative;
+        top: 28px;
+    }
+    
+    #foot1line4 {
+        font-family: 'aleobold';
+        position: relative;
+        top: 41px;
+    }
+    
+    #foot2H4 {
+        font-family: 'aleoregular';
+        font-size: 16px;
+        color: #ebebeb;
+    }
+    
+    #foot2P {
+        font-family: 'aleolight';
+        font-size: 16px;
+        color: #ebebeb;
+        font-weight: lighter;
+    }
+    
+    #foot2line2 {
+        position: relative;
+        top: 15px;
+    }
+    
+    #foot2line3 {
+        position: relative;
+        top: 27px;
+    }
+    
+    #foot2line4 {
+        font-family: 'aleobold';
+        position: relative;
+        top: 41px;
+    }
+    
+    .foot3H4 {
+        font-family: 'aleoregular';
+        font-size: 16px;
+        color: #ebebeb;
+    }
+    
+    #foot3line2 {
+        position: relative;
+        top: 18px;
+    }
+    
+    #foot3line3 {
+        position: relative;
+        top: 36px;
+    }
+    
+    #foot3line4 {
+        position: relative;
+        top: 54px;
+    }
+    
+    #resto1 {
+        font-family: 'wc_mano_negra_btaregular';
+        font-size: 40px;
+        color: #ebebeb;
+        display: inline-block;
+    }
+    
+    #dots1 {
+        color: #f34949;
+    }
+    
+    #foot4P {
+        font-family: 'aleoregular';
+        color: #ebebeb;
+        position: relative;
+        top: 16px;
+    }
+    
+    #hintbold {
+        font-family: 'aleobold';
+    }
