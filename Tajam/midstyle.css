@@ -1,0 +1,628 @@
+    /************ RESET **************/
+    
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+    
+    body {
+        line-height: 1;
+    }
+    
+    ol,
+    ul {
+        list-style: none;
+    }
+    
+    blockquote,
+    q {
+        quotes: none;
+    }
+    
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /********** STYLES **************/
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .wrapper {
+        width: 940px;
+        margin: 0 auto;
+    }
+    /*********** NAV BAR ************/
+    
+    header {
+        background-image: url(images/headerbackground.png);
+        height: 664px;
+        width: auto;
+        background-position: center;
+    }
+    
+    nav {
+        display: inline-block;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        position: relative;
+        top: -21px;
+        margin-right: 16.5px;
+        font-size: 13px;
+    }
+    
+    nav ul li:nth-child(7) {
+        margin-right: 0;
+    }
+    
+    .blue {
+        color: #00e0d0;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    header img {
+        margin-top: 15px;
+        margin-right: 284px;
+    }
+    /********** HEADER TEXT ************/
+    
+    header h1 {
+        font-size: 32px;
+        color: white;
+        text-align: center;
+        position: relative;
+        top: 180px;
+    }
+    
+    header hr {
+        position: relative;
+        top: 200px;
+        width: 52px;
+        border-color: #00e0d0;
+    }
+    
+    header p {
+        position: relative;
+        top: 220px;
+        font-size: 14px;
+        color: white;
+        width: 777px;
+        text-align: center;
+        margin-left: 83px;
+        line-height: 25px;
+    }
+    
+    #learnMore {
+        position: relative;
+        top: 250px;
+        left: 410px;
+    }
+    
+    #buttons {
+        position: relative;
+        top: 350px;
+        left: 34px;
+    }
+    /********** ABOUT *************/
+    
+    #about {
+        height: 405px;
+    }
+    
+    #aboutImg {
+        position: relative;
+        left: 65px;
+        top: 70px;
+    }
+    
+    #aboutus {}
+    
+    section h1 {
+        font-size: 22px;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #113d4b;
+        position: relative;
+        left: 400px;
+        top: -164px;
+    }
+    
+    section p {
+        width: 536px;
+        height: 60px;
+        font-size: 14px;
+        color: #413d4b;
+    }
+    
+    #aboutp1 {
+        position: relative;
+        left: 401px;
+        top: -138px;
+    }
+    
+    #aboutp2 {
+        position: relative;
+        left: 401px;
+        top: -125px;
+    }
+    
+    #learnMore2 {
+        position: relative;
+        top: -109px;
+        left: 404px;
+    }
+    /*********** VIDEO ***************/
+    
+    #vidBackground {
+        background-image: url(images/videobackground.png);
+        height: 554px;
+    }
+    
+    #playBtn {
+        position: relative;
+        top: 200px;
+        left: 427px;
+    }
+    
+    #vidText {
+        font-size: 16px;
+        color: white;
+        position: relative;
+        top: 248px;
+        left: 407px;
+    }
+    /************ EXPERTISE *************/
+    
+    #expertise {
+        height: 755px;
+    }
+    
+    #experH1 {
+        font-size: 22px;
+        color: #413d4b;
+        position: relative;
+        top: 68px;
+        left: 410px;
+    }
+    
+    #experH2 {
+        font-size: 14px;
+        color: #acabae;
+        position: relative;
+        top: 80px;
+        left: 295px;
+    }
+    
+    #flex {
+        width: 940px;
+        height: 500px;
+        display: inline-block;
+        position: relative;
+        top: 100px;
+    }
+    
+    #experHR {
+        position: relative;
+        top: 95px;
+        right: 3px;
+        width: 53px;
+    }
+    
+    #parent {
+        height: 506px;
+        position: relative;
+        top: 120px;
+    }
+    
+    .box {
+        float: left;
+        height: 250px;
+        width: 33.1%;
+    }
+    
+    .boximg {
+        text-align: center;
+        position: relative;
+        left: 125px;
+        top: 40px;
+    }
+    
+    .h3sty {
+        font-size: 14px;
+        color: #413d4b;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+        top: 68px;
+        right: 6px;
+    }
+    
+    .boxp {
+        font-size: 14px;
+        color: #7a7a7a;
+        text-align: center;
+        height: 60px;
+        width: 258px;
+        position: relative;
+        top: 85px;
+        left: 20px;
+    }
+    /**************** TEAM *****************/
+    
+    #teambackground {
+        background-image: url(images/bottombackground.png);
+        height: 717px;
+    }
+    
+    #teamh2 {
+        font-size: 22px;
+        font-weight: 800;
+        color: white;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        position: relative;
+        top: 70px;
+    }
+    
+    #teamp {
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        position: relative;
+        top: 85px;
+        left: 195px;
+    }
+    
+    #teamHR {
+        position: relative;
+        top: 55px;
+        right: 3px;
+        width: 53px;
+    }
+    
+    #teamParent {
+        height: 315px;
+        position: relative;
+        top: 93px;
+    }
+    
+    .teamBox {
+        float: left;
+        width: 220px;
+        height: 313px;
+        border: solid 1px white;
+    }
+    
+    #team1 {
+        margin-right: 17px;
+    }
+    
+    #team2 {
+        margin-right: 17px;
+    }
+    
+    #team3 {
+        margin-right: 17px;
+    }
+    
+    .teamH6 {
+        font-size: 14px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        top: 24px;
+    }
+    
+    .teamP {
+        font-size: 13px;
+        position: relative;
+        top: 30px;
+        left: 60px;
+    }
+    
+    #team2P {
+        position: relative;
+        left: 67px;
+    }
+    
+    #team3P {
+        position: relative;
+        left: 79px;
+    }
+    
+    #team4P {
+        position: relative;
+        left: 74px;
+    }
+    
+    #joinP {
+        position: relative;
+        top: 159px;
+        font-size: 14px;
+        color: white;
+        left: 328px;
+    }
+    
+    #joinBTN {
+        position: relative;
+        top: 188px;
+        left: 406px;
+    }
+    /************** OUR WORKS *************/
+    
+    #ourWorks {
+        height: 740px;
+    }
+    
+    #worksImg {
+        position: relative;
+        top: 73px;
+    }
+    
+    #worksH2 {
+        font-size: 22px;
+        color: #413d4b;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        top: 72px;
+    }
+    
+    #worksP {
+        font-size: 14px;
+        color: #413d4b;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        top: 55px;
+        left: 740px;
+    }
+    
+    #learnmoreBTN {
+        position: relative;
+        top: 140px;
+        left: 400px;
+    }
+    /************* COMMENTS ***************/
+    
+    #comments {
+        background-image: url(images/commentsbackground.png);
+        height: 501px;
+    }
+    
+    #symbol {
+        position: relative;
+        left: 455px;
+        top: 68px;
+    }
+    
+    #commentsP {
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        height: 109px;
+        width: 782px;
+        line-height: 26px;
+        position: relative;
+        top: 133px;
+        left: 93px;
+    }
+    
+    #selfies {
+        position: relative;
+        top: 240px;
+        left: 155px;
+    }
+    
+    #CEO {
+        position: relative;
+        left: 413px;
+        top: 130px;
+    }
+    /************* FORM ****************/
+    
+    #form {
+        height: 710px;
+    }
+    
+    #formH2 {
+        font-size: 22px;
+        position: relative;
+        top: 72px;
+    }
+    
+    #formH22 {
+        font-size: 22px;
+        position: relative;
+        top: 50px;
+        left: 535px;
+    }
+    
+    #input {
+        height: 45px;
+        width: 458px;
+        font-size: 14px;
+    }
+    
+    #input2 {
+        height: 45px;
+        width: 458px;
+        font-size: 14px;
+    }
+    
+    #input3 {
+        height: 45px;
+        width: 458px;
+        font-size: 14px;
+    }
+    
+    #input4 {
+        height: 200px;
+        width: 460px;
+        font-size: 14px;
+    }
+    
+    #formMove {
+        position: relative;
+        top: 79px;
+    }
+    
+    #submitBTN {
+        position: relative;
+        top: -266px;
+    }
+    
+    #clientIMG {
+        position: relative;
+        top: -360px;
+        left: 414px;
+    }
+    /************ FOOTER ****************/
+    
+    footer {
+        background-image: url(images/footerbackground.png);
+        height: 400px;
+    }
+    
+    #leftfoot {
+        position: relative;
+        top: 58px;
+    }
+    
+    #centerfoot {
+        position: relative;
+        top: 90px;
+        left: 32px;
+    }
+    
+    #rightfoot {
+        position: relative;
+        top: 90px;
+        left: 56px;
+    }
+    
+    #copyright {
+        position: relative;
+        top: 129px;
+    }
