@@ -1,0 +1,57 @@
+#wrap {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#calc {
+    width: 250px;
+    height: 450px;
+    background-color: aqua;
+    border-radius: 25px;
+    
+}
+#screen {
+    width: 200px;
+    height: 350px;
+    background-color: white;
+    border-radius: 25px;
+    margin-left: 25px;
+    margin-top: 30px;
+}
+#totalBill {
+    margin-left: 35px;
+    margin-top: 80px;
+}
+#tip {
+    margin-left: 35px;
+    margin-top: 40px;
+}
+#findTip {
+    margin-left: 67px;
+    margin-top: 100px;
+}
+#display {
+    margin-left: 67px;
+    display: none;
+}
+.circle {
+    height: 45px;
+    width: 45px;
+    border-radius: 30px;
+    background-color: black;
+    margin-left: 100px;
+    margin-top: 10px;
+    
+   
+}
+.swag {
+    margin-left: 30px;
+}
+.intro {
+   width: 600px;
+    height: 600px;
+    background-color: pink;
+}
